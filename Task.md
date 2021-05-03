@@ -11,7 +11,8 @@
 11.Make Volume Read Only(So Docker Can't Write On Outer Location)
 12.Add ENV Variable
 13.Create ENV File To Use Use ENV
-14.Create Docker Compose So We don't have to Write All Command  
+14.Create Docker Compose So We don't have to Write All Command 
+ 
 
 Docker File
 -FROM: Get Image From Docker (Node).
@@ -28,13 +29,7 @@ Docker File
 
 -CMD: To Run Command(["node", "index.js"]), For Run Time When We Run Container
 
--ENV PORT 3000: Here We Can Define Default Port In Docker File, While Running Run Command We Can Use This To Change Default Values using --env PORT=4000 Tag Here 4000 Is New Value For The PORT, We Also Have To Change Part Of Port 3000:4000 
 
--EXPOSE $PORT: Here We Are Using The Port Defined In ENV File
-
-- --env-file ./.env : For Add local ENV To Docker ENV 
-
-- docker rm node-app -fv: Delete The Container And Volume Related With That Container(node-app Is Container Name, -f tag For Force Remove/Delete And v tag For Volume)
 
 Commands:
 
@@ -60,6 +55,27 @@ Commands:
 Instead Of Full Path We Can Use The Variable For CMD(%cd%) For PowerShell (${pwd})
 (docker run -v ${pwd}:/app -p 3000:3000 -d --name node-app node-app-image)
 
+-ENV PORT 3000: Here We Can Define Default Port In Docker File, While Running Run Command We Can Use This To Change Default Values using --env PORT=4000 Tag Here 4000 Is New Value For The PORT, We Also Have To Change Part Of Port 3000:4000 
+
+-EXPOSE $PORT: Here We Are Using The Port Defined In ENV File
+
+- --env-file ./.env : For Add local ENV To Docker ENV 
+
+- docker rm node-app -fv: Delete The Container And Volume Related With That Container(node-app Is Container Name, 
+
+-f tag For Force Remove/Delete And v tag For Volume)
+
+-docker volume prune: For Delete Docker Volume
+
+-docker-compose up -d: For Run Docker Using Compose File
+
+-docker-compose down: Stop Container
+
+-docker-compose down: Stop Container And Remove Volume
+
+-docker-compose up -d --build: For Force Rebuild The Docker Image
+
+
 Docker Ignore File
 node_module
 Dockerfile
@@ -68,6 +84,23 @@ Dockerfile
 .gitignore
 We Can Add All The Files Which We Don't Need To Copy in Container
 
+Docker Compose
+version: For Define Docker Compose Version(3)
+services: Define All The Services Which Are Different Container We Have Created
+build: Path Of The Container
+ports: List Of Port We Needed For Application
+volumes: For Defines All The volumes
+environment: For Define ENV Variables
+env_file: For Define Env File
+
+Name Of Generated File Will Be Folder Name Underscore Service(Container) Name.
+
+Once We Run docker compose Up And After That When We Again Run Same Command It Will Not Build Image Again
+
+So If We Have Made Any Change In Build Process We Have To Rebuild The Docker Image
+
+Issues: 
+-Nodemon Not Working Inside Container
 
 
 
