@@ -16,8 +16,16 @@
 16.Configure To Switch Between Different Env In Compose File
 17.Add Compose Files into Docker Ignore
 18.We Can Use If Condition TO Run Npm In Production Mode Or Dev Mode Depending On Compose File 
-19. Set Args And ENV In Docker-Compose
-20. Change npm run dev command nodemon --legacy-watch index.js So Nodemon Work in Docker
+19.Set Args And ENV In Docker-Compose
+20.Change npm run dev command nodemon --legacy-watch index.js So Nodemon Work in Docker
+21.Add Mongo Image Into Docker Compose File
+22.Go Into Mongo DB And Add Data Into It From Docker CLI
+23.For Prevent Data Of Database We have To Create A Volume Using Docker Compose File 
+24.We Also Have To Provide Volume So Its  Don't Give Any Error 
+25.After Adding Named Volume We Don't Have To Run using -V Tag Else It Will Delete The Data
+26.Add Mongoose Dependencies 
+27.Get Ip From Container For DB Connection  
+28.We Can Also Connect Using Name Of Container And Container Can Communicate With Each Others, So at the place of ip we can also place the ip 
 
  
 
@@ -41,6 +49,10 @@ Docker File
 -EXPOSE: To Tell Docker Which Port(3000) To Expose
 
 -CMD: To Run Command(["node", "index.js"]), For Run Time When We Run Container
+
+-Add Mongo As The Name Of Service And In Environment Add Username And Password 
+
+-volume: - mongo-db:/data/db/ (Mongo Db Is Name Of Volume)
 
 
 
@@ -88,6 +100,7 @@ Instead Of Full Path We Can Use The Variable For CMD(%cd%) For PowerShell (${pwd
 
 -docker-compose up -d --build: For Force Rebuild The Docker Image
 
+-docker inspect nodedocker_node-app_1 (Last Is Name Of Container For Get The Details Of Container)
 
 Docker Ignore File
 node_module
