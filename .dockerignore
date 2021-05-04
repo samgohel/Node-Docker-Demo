@@ -4,3 +4,4 @@ Task.md
 .dockerignore
 .git
 .gitignore
+docker-compose*

@@ -12,6 +12,12 @@
 12.Add ENV Variable
 13.Create ENV File To Use Use ENV
 14.Create Docker Compose So We don't have to Write All Command 
+15.Create Dev And Prod Docker Compose File For Different Env
+16.Configure To Switch Between Different Env In Compose File
+17.Add Compose Files into Docker Ignore
+18.We Can Use If Condition TO Run Npm In Production Mode Or Dev Mode Depending On Compose File 
+19. Set Args And ENV In Docker-Compose
+
  
 
 Docker File
@@ -22,6 +28,12 @@ Docker File
 -COPY: Copy File Into Docker and Second Argument Where We Want To Add The File, We Can Define Path Or Can Use "." For Use Working Dir(package.json). 
 
 -RUN: To Run Command On Docker(npm install) for install dependencies defined in package.json file,
+
+-RUN if[ "$NODE_ENV"="development" ]; \
+         then npm install; \
+         else npm install --only=production; \
+         fi      
+         This Will Check ARG From Compose File And Run The Command Accordingly
 
 -COPY: Copy All The Remaining File Into Docker Image(. ./), Docker Works As Layers And Also Create Cache After Each Command, So After Building First Image If Files had Change Then It Will Build Image Bit Faster because Docker Don't Have To Check package.json steps it can use cache.
 
@@ -98,6 +110,15 @@ Name Of Generated File Will Be Folder Name Underscore Service(Container) Name.
 Once We Run docker compose Up And After That When We Again Run Same Command It Will Not Build Image Again
 
 So If We Have Made Any Change In Build Process We Have To Rebuild The Docker Image
+
+In Docker Compose File Add Common Config Of Prod And Dev Env.
+
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml: Here -f Tag We Define The From Where To Load Configuration, Here Order Of File Matters.
+
+
+
+
+
 
 Issues: 
 -Nodemon Not Working Inside Container
