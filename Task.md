@@ -17,6 +17,7 @@
 17.Add Compose Files into Docker Ignore
 18.We Can Use If Condition TO Run Npm In Production Mode Or Dev Mode Depending On Compose File 
 19. Set Args And ENV In Docker-Compose
+20. Change npm run dev command nodemon --legacy-watch index.js So Nodemon Work in Docker
 
  
 
