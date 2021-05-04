@@ -8,7 +8,7 @@
 8. Change Run Command On Docker File 
 9. Protect Volume For Override Data Which Don't Needed To Overwrite While Copy(Using Anno.)
 10.Add Anonymous 
-11.Make Volume Read Only(So Docker Can't Write On Outer Location)
+1.Make Volume Read Only(So Docker Can't Write On Outer Location)
 12.Add ENV Variable
 13.Create ENV File To Use Use ENV
 14.Create Docker Compose So We don't have to Write All Command 
@@ -26,6 +26,8 @@
 26.Add Mongoose Dependencies 
 27.Get Ip From Container For DB Connection  
 28.We Can Also Connect Using Name Of Container And Container Can Communicate With Each Others, So at the place of ip we can also place the ip 
+29.Export Config For Use From ENV, And Pass That Into Docker Compose
+30.Set Up Start Order Which Container Should Start First Using Depends On In Compose File
 
  
 
