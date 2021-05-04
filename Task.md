@@ -25,12 +25,15 @@
 25.After Adding Named Volume We Don't Have To Run using -V Tag Else It Will Delete The Data
 26.Add Mongoose Dependencies 
 27.Get Ip From Container For DB Connection
-**.If There Is Error While DB Connection See(https://www.youtube.com/watch?v=bZhlX90m1cw&ab_channel=YogendraTamang)  
+**.If There Is Error While DB Connection See(https://www.youtube.com/watch?v=bZhlX90m1cw&ab_channel=YogendraTamang) 
+** Use For Authentication Issue (use admin;
+db.grantRolesToUser('admin', [{ role: 'root', db: 'admin' }])) 
 28.We Can Also Connect Using Name Of Container And Container Can Communicate With Each Others, So at the place of ip we can also place the ip 
 29.Export Config For Use From ENV, And Pass That Into Docker Compose
 30.Set Up Start Order Which Container Should Start First Using Depends On In Compose File
 31.Try To Reconnect After Some Seconds Using Function
 32.We Can Use Tag --no-deps To Start Only One Mentioned Container/Service
+33.Create Express Application
 
 
  
@@ -136,7 +139,13 @@ In Docker Compose File Add Common Config Of Prod And Dev Env.
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml: Here -f Tag We Define The From Where To Load Configuration, Here Order Of File Matters.
 
 
-
+Create Express Application
+-Create PostModel
+-Create Post Controller
+-Create Routes
+-Add Routes Into Index
+-Add Middleware
+-Check Postman API Is Working Or Not
 
 
 
