@@ -38,7 +38,7 @@ const connectWithRetry = () => {
 };
 connectWithRetry();
 
-// Middleware
+// Middleware & Session Setup
 app.use(
   session({
     store: new RedisStore({ client: redisClient }),
@@ -48,7 +48,7 @@ app.use(
       resave: false,
       saveUninitialized: false,
       httpOnly: true,
-      maxAge: 30000,
+      maxAge: 60000,
     },
   })
 );

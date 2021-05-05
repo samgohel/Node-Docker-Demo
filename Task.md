@@ -158,7 +158,13 @@ Create Express Application
 -Encrypt Password In AuthController
 -Create Login In Auth Controller
 -Create Login Routes
-- 
+-Adde Redis Image 
+-Adde Redis Dependencies 
+-Add Redis ENV
+-Add Redis Config
+-Add User Into Session
+-Add Middleware For Login And user Specific Actions
+-
 
 
 
