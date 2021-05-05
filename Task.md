@@ -65,6 +65,8 @@ Docker File
 
 If Container Is Up And We Add New Image And Then We Again Use Up Command It Will Take Our Changes From Compose File, We Don't Have To Down And Then Again Up 
 
+-V: We Can Use This Tag When We Want To ReBuild Image With Renew Anno Volume Which Is Already There 
+
 
 
 Commands:
