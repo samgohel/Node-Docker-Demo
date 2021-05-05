@@ -35,6 +35,8 @@ db.grantRolesToUser('admin', [{ role: 'root', db: 'admin' }]))
 32.We Can Use Tag --no-deps To Start Only One Mentioned Container/Service
 33.Create Express Application
 34. Add Redis In Docker 
+35. We Haven't Open Mongo Port So Only Express App Can Talk With The Mongo Database No One From Outside Can Access Mongo Direct.
+36.Add nginx For Load Balance And Make Application Scalable 
 
  
 
@@ -164,8 +166,17 @@ Create Express Application
 -Add Redis Config
 -Add User Into Session
 -Add Middleware For Login And user Specific Actions
--
+- Add Protect Where Login Is Must
 
+Nginx
+-Create default conf file
+-Add Nginx Configurations 
+-Add Nginx Image Into Docker Compose 
+-Open Port For Nginx
+-We Can Create New nginx image with configuration or we can use volume
+-Add Volume 
+-Add Express Behind Proxy Setting
+-Add --scale node-app=2 Run Two Container Of The Named Application 
 
 
 Issues: 
