@@ -34,7 +34,7 @@ db.grantRolesToUser('admin', [{ role: 'root', db: 'admin' }]))
 31.Try To Reconnect After Some Seconds Using Function
 32.We Can Use Tag --no-deps To Start Only One Mentioned Container/Service
 33.Create Express Application
-
+34. Add Redis In Docker 
 
  
 
@@ -62,6 +62,8 @@ Docker File
 -Add Mongo As The Name Of Service And In Environment Add Username And Password 
 
 -volume: - mongo-db:/data/db/ (Mongo Db Is Name Of Volume)
+
+If Container Is Up And We Add New Image And Then We Again Use Up Command It Will Take Our Changes From Compose File, We Don't Have To Down And Then Again Up 
 
 
 
@@ -146,6 +148,15 @@ Create Express Application
 -Add Routes Into Index
 -Add Middleware
 -Check Postman API Is Working Or Not
+-Create User Model
+-Create Auth Controller
+-Create User Routes
+-Add Routes Into Index
+-Add Bcryptjs For Store Encrypted Password
+-Encrypt Password In AuthController
+-Create Login In Auth Controller
+-Create Login Routes
+- 
 
 
 
