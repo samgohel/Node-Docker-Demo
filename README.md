@@ -1,29 +1,29 @@
 # Docker Demo Application With Node & Express
 
 ## How To Run
- -Git Clone
- -cd into project
- -Open Terminal
- -docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build
- -End Points:
-    -Home
-        (GET)  http://localhost:3000/api/v1
-    -Create User
-        (POST) http://localhost:3000/api/v1/users/signup 
-        (body: username(String), password(String))
-    -Login 
-        (POST) http://localhost:3000/api/v1/users/login
-        (body: username(String), password(String))
-    -Get All Post
-        (GET) http://localhost:3000/api/v1/posts/
-    -Get One By Id
-        (GET) http://localhost:3000/api/v1/posts/:id
-    -Create Post
-        (POST) http://localhost:3000/api/v1/posts/
-        (Body: title(String), body(String))
-    -Update Post
-        (PATCH) http://localhost:3000/api/v1/posts/:id
-        (Body: title(String), body(String))
+ -Git Clone \
+ -cd into project \
+ -Open Terminal \
+ -docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d --build \
+ -End Points: \
+    -Home \
+        (GET)  http://localhost:3000/api/v1 \
+    -Create User \
+        (POST) http://localhost:3000/api/v1/users/signup \
+        (body: username(String), password(String)) \
+    -Login \
+        (POST) http://localhost:3000/api/v1/users/login \
+        (body: username(String), password(String)) \
+    -Get All Post \
+        (GET) http://localhost:3000/api/v1/posts/ \
+    -Get One By Id \
+        (GET) http://localhost:3000/api/v1/posts/:id \
+    -Create Post \
+        (POST) http://localhost:3000/api/v1/posts/ \
+        (Body: title(String), body(String)) \
+    -Update Post \
+        (PATCH) http://localhost:3000/api/v1/posts/:id \
+        (Body: title(String), body(String)) \
 
         
 
